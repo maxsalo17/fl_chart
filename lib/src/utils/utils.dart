@@ -266,10 +266,10 @@ class Utils {
     if (providedStyle == null || providedStyle.inherit) {
       effectiveTextStyle = defaultTextStyle.style.merge(providedStyle);
     }
-    if (MediaQuery.boldTextOf(context)) {
-      effectiveTextStyle = effectiveTextStyle!
-          .merge(const TextStyle(fontWeight: FontWeight.bold));
-    }
+    // if (MediaQuery.boldTextOf(context)) {
+    //   effectiveTextStyle = effectiveTextStyle!
+    //       .merge(const TextStyle(fontWeight: FontWeight.bold));
+    // }
     return effectiveTextStyle!;
   }
 

@@ -51,40 +51,40 @@ class PieChart2State extends State {
               ),
             ),
           ),
-          const Column(
+          Column(
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Indicator(
+              const Indicator(
                 color: AppColors.contentColorBlue,
                 text: 'First',
                 isSquare: true,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 4,
               ),
-              Indicator(
+              const Indicator(
                 color: AppColors.contentColorYellow,
                 text: 'Second',
                 isSquare: true,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 4,
               ),
-              Indicator(
+              const Indicator(
                 color: AppColors.contentColorPurple,
                 text: 'Third',
                 isSquare: true,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 4,
               ),
-              Indicator(
+              const Indicator(
                 color: AppColors.contentColorGreen,
                 text: 'Fourth',
                 isSquare: true,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 18,
               ),
             ],
