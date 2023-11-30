@@ -182,14 +182,17 @@ class PieChartPainter extends BaseChartPainter<PieChartData> {
     final endLineTo = endLineFrom + endLineDirection * section.radius;
     final endLine = Line(endLineFrom, endLineTo);
 
-    var sectionPath = Path()
-      ..moveTo(startLine.from.dx, startLine.from.dy)
-      ..lineTo(startLine.to.dx, startLine.to.dy)
-      ..arcTo(sectionRadiusRect, startRadians, sweepRadians, false)
-      ..lineTo(endLine.from.dx, endLine.from.dy)
-      ..arcTo(centerRadiusRect, endRadians, -sweepRadians, false)
-      ..moveTo(startLine.from.dx, startLine.from.dy)
-      ..close();
+    var sectionPath = Path();
+    try {
+      sectionPath
+        ..moveTo(startLine.from.dx, startLine.from.dy)
+        ..lineTo(startLine.to.dx, startLine.to.dy)
+        ..arcTo(sectionRadiusRect, startRadians, sweepRadians, false)
+        ..lineTo(endLine.from.dx, endLine.from.dy)
+        ..arcTo(centerRadiusRect, endRadians, -sweepRadians, false)
+        ..moveTo(startLine.from.dx, startLine.from.dy)
+        ..close();
+    } catch (e) {}
 
     /// Subtract section space from the sectionPath
     if (sectionSpace != 0) {
